@@ -2,7 +2,7 @@
 
 resource "aws_key_pair" "deployer" {
   key_name = "tws-terra-key"
-  public_key = file("/location where key is creted/terra-key.pub")
+  public_key = file("/root/terraform-project/Terraform-project/terraform-practice/terra-key.pub")
 }
 
 # Default VPS
