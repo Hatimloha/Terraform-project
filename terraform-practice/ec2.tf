@@ -19,13 +19,16 @@ resource "aws_security_group" "twssecurity" {
   vpc_id = aws_default_vpc.default.id #interpolation
 
   #incoming
-  ingress = {
+  # Incoming
+  ingress {
     description = "this is for SSH"
-    from_port = 22
-    to_port = 22
-    protocol = "tcp"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+
 
   # outgoing
   egress {
